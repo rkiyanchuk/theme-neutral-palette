@@ -3,42 +3,36 @@ import { ensureDir } from "std/fs/ensure_dir.ts";
 import { type CatppuccinFlavor, flavorEntries } from "@catppuccin/palette";
 
 const combinedFile = () => {
-  const flavors = flavorEntries.reduce(
-    (acc, [flavorName, flavor]) => {
-      const accents = flavor.accentColorEntries.reduce(
-        (acc, [accentName, accentColor]) => {
-          const tints = Object.values(flavor.tints[accentName]).map((color) =>
-            color.hex
-          );
-          const shades = Object.values(flavor.shades[accentName]).map((color) =>
-            color.hex
-          );
+  const flavors = flavorEntries.map(([flavorName, flavor]) => {
+    const accents = flavor.accentColorEntries.map(
+      ([accentName, accentColor]) => {
+        const tints = Object.values(flavor.tints[accentName]).map((color) =>
+          color.hex
+        );
+        const shades = Object.values(flavor.shades[accentName]).map((color) =>
+          color.hex
+        );
+        return [
+          `    "${accentName}": (`,
+          `      ${accentColor.hex},`,
+          `      (${tints}),`,
+          `      (${shades})`,
+          `    )`,
+        ].join("\n");
+      },
+    ).join(",\n");
 
-          acc += `    "${accentName}": (
-      ${accentColor.hex}, 
-      (${tints}), 
-      (${shades})
-    ),\n`;
+    const monochromaticColors = flavor.monochromaticColorEntries.map(
+      ([colorName, color]) => `    "${colorName}": (${color.hex})`,
+    ).join(",\n");
 
-          return acc;
-        },
-        "",
-      );
-
-      const monochromaticColors = flavor.monochromaticColorEntries.reduce(
-        (acc, [colorName, color]) => {
-          acc += `    "${colorName}": (${color.hex}),\n`;
-          return acc;
-        },
-        "",
-      );
-
-      acc += `  "${flavorName}": (\n${accents}${monochromaticColors}  ),\n`;
-
-      return acc;
-    },
-    "",
-  );
+    return [
+      `  "${flavorName}": (`,
+      `${accents},`,
+      monochromaticColors,
+      `  )`,
+    ].join("\n");
+  }).join(",\n");
 
   return `@use "sass:map";
 @use "sass:list";
@@ -53,7 +47,7 @@ ${flavors}
   @if $index < 1 or $index > 5 {
     @error "#{$variant} '#{$index}' is invalid. Must be between 1 and 5.";
   }
-  
+
   @if $variant == null {
     @return list.nth($base, 1);
   } @else if $variant == 'tint' {
@@ -99,7 +93,7 @@ export const compileScss = async (outDir: string) => {
   await ensureDir(`${outDir}/scss`);
 
   // write each flavor to its own file
-  flavorEntries.map(([flavorName, flavor]) =>
+  flavorEntries.forEach(([flavorName, flavor]) =>
     Deno.writeTextFile(
       `${outDir}/scss/_${flavorName}.scss`,
       individualFile(flavor),

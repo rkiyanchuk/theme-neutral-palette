@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catppuccin Palette Demo - OKLCh Color Space</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #1e1e2e;
+            --text: #cdd6f4;
+            --subtext: #a6adc8;
+            --surface: #313244;
+            --overlay: #45475a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #f5c2e7, #cba6f7, #89b4fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--subtext);
+            font-size: 1.1rem;
+        }
+
+        .info-banner {
+            background: var(--surface);
+            border-left: 4px solid #89b4fa;
+            padding: 1rem 1.5rem;
+            margin: 2rem auto;
+            max-width: 1400px;
+            border-radius: 8px;
+        }
+
+        .info-banner p {
+            margin: 0;
+            color: var(--subtext);
+        }
+
+        .info-banner strong {
+            color: var(--text);
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .flavor-section {
+            margin-bottom: 4rem;
+        }
+
+        .flavor-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--overlay);
+        }
+
+        .flavor-emoji {
+            font-size: 2rem;
+        }
+
+        .flavor-name {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .flavor-meta {
+            margin-left: auto;
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--subtext);
+        }
+
+        .color-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .color-card {
+            display: flex;
+            align-items: stretch;
+            background: var(--surface);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            height: 60px;
+        }
+
+        .color-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .color-card:active {
+            transform: translateX(2px);
+        }
+
+        .color-swatch {
+            width: 120px;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .copy-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            pointer-events: none;
+            transition: transform 0.2s;
+        }
+
+        .copy-indicator.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .color-info {
+            display: grid;
+            grid-template-columns: 180px 120px 140px 220px;
+            align-items: center;
+            padding: 0 1rem;
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        .color-accent-badge {
+            display: inline-block;
+            background: var(--overlay);
+            color: var(--subtext);
+            font-size: 0.65rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .color-values {
+            display: contents;
+        }
+
+        .color-value {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            font-size: 0.875rem;
+            font-family: 'Courier New', monospace;
+            color: var(--subtext);
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: background 0.15s;
+        }
+
+        .color-value:hover {
+            background: var(--overlay);
+        }
+
+        .color-value-label {
+            font-weight: 600;
+            font-size: 0.7rem;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--overlay);
+            color: var(--subtext);
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer a {
+            color: #89b4fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: var(--subtext);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .color-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .color-swatch {
+                width: 100%;
+                height: 60px;
+            }
+
+            .color-info {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 0.75rem;
+            }
+
+            .color-value {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+
+            .color-value-label {
+                min-width: 60px;
+            }
+
+            .flavor-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .flavor-meta {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catppuccin Palette Demo</h1>
+        <p class="subtitle">OKLCh Color Space Edition</p>
+    </header>
+
+    <div class="info-banner">
+        <p><strong>🎨 Color Space:</strong> This palette provides color values in multiple formats including Hex, RGB, and OKLCh (Oklab LCh). OKLCh is a perceptually uniform color space that provides better color consistency and manipulation.</p>
+    </div>
+
+    <main id="palette-container">
+        <div class="loading">Loading palette...</div>
+    </main>
+
+    <footer>
+        <p>
+            <strong>Catppuccin Palette</strong> - Soothing pastel theme<br>
+            <a href="https://github.com/catppuccin/palette" target="_blank">GitHub</a> •
+            <a href="https://catppuccin.com" target="_blank">catppuccin.com</a>
+        </p>
+    </footer>
+
+    <script>
+        async function loadPalette() {
+            try {
+                const response = await fetch('../palette.json');
+                const data = await response.json();
+                renderPalette(data);
+            } catch (error) {
+                document.getElementById('palette-container').innerHTML = `
+                    <div class="loading">
+                        <p>Error loading palette: ${error.message}</p>
+                        <p>Make sure palette.json exists in the parent directory.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderPalette(data) {
+            const container = document.getElementById('palette-container');
+            container.innerHTML = '';
+
+            const flavorOrder = ['latte', 'frappe', 'macchiato', 'mocha'];
+
+            flavorOrder.forEach(flavorKey => {
+                const flavor = data[flavorKey];
+                if (!flavor) return;
+
+                const section = document.createElement('div');
+                section.className = 'flavor-section';
+                section.innerHTML = `
+                    <div class="flavor-header">
+                        <span class="flavor-emoji">${flavor.emoji}</span>
+                        <h2 class="flavor-name">${flavor.name}</h2>
+                        <div class="flavor-meta">
+                            <span>${flavor.dark ? '🌙 Dark' : '☀️ Light'} Theme</span>
+                            <span>26 Colors</span>
+                        </div>
+                    </div>
+                    <div class="color-grid" id="${flavorKey}-grid"></div>
+                `;
+
+                container.appendChild(section);
+
+                const grid = document.getElementById(`${flavorKey}-grid`);
+
+                // Sort colors: accents first, then non-accents
+                const sortedColors = Object.entries(flavor.colors).sort((a, b) => {
+                    if (a[1].accent === b[1].accent) return a[1].order - b[1].order;
+                    return b[1].accent - a[1].accent;
+                });
+
+                sortedColors.forEach(([colorKey, color]) => {
+                    const card = createColorCard(color, flavorKey);
+                    grid.appendChild(card);
+                });
+            });
+        }
+
+        function createColorCard(color, flavorKey) {
+            const card = document.createElement('div');
+            card.className = 'color-card';
+
+            const hexValue = color.hex;
+            const rgbValue = `rgb(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b})`;
+            const oklchValue = `oklch(${color.oklch.l.toFixed(4)} ${color.oklch.c.toFixed(4)} ${Math.round(color.oklch.h)})`;
+
+            card.innerHTML = `
+                <div class="color-swatch" style="background-color: ${hexValue};">
+                    <div class="copy-indicator">Copied!</div>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">
+                        ${color.name}
+                        ${color.accent ? '<span class="color-accent-badge">ACCENT</span>' : ''}
+                    </div>
+                    <div class="color-value" data-copy="${hexValue}">
+                        <span class="color-value-label">HEX</span>
+                        <span>${hexValue}</span>
+                    </div>
+                    <div class="color-value" data-copy="${rgbValue}">
+                        <span class="color-value-label">RGB</span>
+                        <span>${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}</span>
+                    </div>
+                    <div class="color-value" data-copy="${oklchValue}">
+                        <span class="color-value-label">OKLCh</span>
+                        <span>${color.oklch.l.toFixed(4)} ${color.oklch.c.toFixed(4)} ${Math.round(color.oklch.h)}</span>
+                    </div>
+                </div>
+            `;
+
+            // Add click handlers for each color value
+            card.querySelectorAll('.color-value').forEach(valueEl => {
+                valueEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const textToCopy = valueEl.getAttribute('data-copy');
+                    copyToClipboard(textToCopy, card);
+                });
+            });
+
+            return card;
+        }
+
+        async function copyToClipboard(text, card) {
+            try {
+                await navigator.clipboard.writeText(text);
+                const indicator = card.querySelector('.copy-indicator');
+                indicator.classList.add('show');
+                setTimeout(() => {
+                    indicator.classList.remove('show');
+                }, 1000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
+        }
+
+        // Load palette on page load
+        loadPalette();
+    </script>
+</body>
+</html>

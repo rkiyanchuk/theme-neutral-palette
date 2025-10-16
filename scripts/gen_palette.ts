@@ -29,132 +29,132 @@ const definitions = {
     colors: {
       rosewater: {
         name: "Rosewater",
-        object: new Color("#dc8a78"),
+        object: new Color("oklch", [0.714133, 0.104543, 33.096720]),
         accent: true,
       },
       flamingo: {
         name: "Flamingo",
-        object: new Color("#dd7878"),
+        object: new Color("oklch", [0.685640, 0.125940, 20.867035]),
         accent: true,
       },
       pink: {
         name: "Pink",
-        object: new Color("#ea76cb"),
+        object: new Color("oklch", [0.725560, 0.173933, 338.433343]),
         accent: true,
       },
       mauve: {
         name: "Mauve",
-        object: new Color("#8839ef"),
+        object: new Color("oklch", [0.554670, 0.250346, 297.015648]),
         accent: true,
       },
       red: {
         name: "Red",
-        object: new Color("#d20f39"),
+        object: new Color("oklch", [0.550474, 0.215514, 19.809464]),
         accent: true,
       },
       maroon: {
         name: "Maroon",
-        object: new Color("#e64553"),
+        object: new Color("oklch", [0.625201, 0.196746, 20.272381]),
         accent: true,
       },
       peach: {
         name: "Peach",
-        object: new Color("#fe640b"),
+        object: new Color("oklch", [0.691977, 0.204052, 42.429266]),
         accent: true,
       },
       yellow: {
         name: "Yellow",
-        object: new Color("#df8e1d"),
+        object: new Color("oklch", [0.713992, 0.149442, 67.776655]),
         accent: true,
       },
       green: {
         name: "Green",
-        object: new Color("#40a02b"),
+        object: new Color("oklch", [0.625044, 0.177158, 140.444838]),
         accent: true,
       },
       teal: {
         name: "Teal",
-        object: new Color("#179299"),
+        object: new Color("oklch", [0.602269, 0.098115, 201.104748]),
         accent: true,
       },
       sky: {
         name: "Sky",
-        object: new Color("#04a5e5"),
+        object: new Color("oklch", [0.682020, 0.144819, 235.382219]),
         accent: true,
       },
       sapphire: {
         name: "Sapphire",
-        object: new Color("#209fb5"),
+        object: new Color("oklch", [0.647744, 0.106769, 212.889281]),
         accent: true,
       },
       blue: {
         name: "Blue",
-        object: new Color("#1e66f5"),
+        object: new Color("oklch", [0.558617, 0.225503, 262.086651]),
         accent: true,
       },
       lavender: {
         name: "Lavender",
-        object: new Color("#7287fd"),
+        object: new Color("oklch", [0.663763, 0.175103, 273.134604]),
         accent: true,
       },
       text: {
         name: "Text",
-        object: new Color("#4c4f69"),
+        object: new Color("oklch", [0.435470, 0.043008, 279.325021]),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#5c5f77"),
+        object: new Color("oklch", [0.492003, 0.038491, 279.299161]),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#6c6f85"),
+        object: new Color("oklch", [0.547078, 0.034343, 279.083697]),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#7c7f93"),
+        object: new Color("oklch", [0.600878, 0.030490, 278.694364]),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#8c8fa1"),
+        object: new Color("oklch", [0.653554, 0.026879, 278.120816]),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#9ca0b0"),
+        object: new Color("oklch", [0.707668, 0.023670, 274.600835]),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#acb0be"),
+        object: new Color("oklch", [0.758394, 0.020453, 273.153552]),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#bcc0cc"),
+        object: new Color("oklch", [0.808307, 0.017393, 271.198155]),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#ccd0da"),
+        object: new Color("oklch", [0.857477, 0.014480, 268.475592]),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#eff1f5"),
+        object: new Color("oklch", [0.957761, 0.005767, 264.532152]),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#e6e9ef"),
+        object: new Color("oklch", [0.933459, 0.008714, 264.520602]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#dce0e8"),
+        object: new Color("oklch", [0.905965, 0.011717, 264.507105]),
         accent: false,
       },
     },
@@ -166,132 +166,132 @@ const definitions = {
     colors: {
       rosewater: {
         name: "Rosewater",
-        object: new Color("#f2d5cf"),
+        object: new Color("oklch", [0.895452, 0.033549, 31.599560]),
         accent: true,
       },
       flamingo: {
         name: "Flamingo",
-        object: new Color("#eebebe"),
+        object: new Color("oklch", [0.843940, 0.055309, 18.306648]),
         accent: true,
       },
       pink: {
         name: "Pink",
-        object: new Color("#f4b8e4"),
+        object: new Color("oklch", [0.850369, 0.089242, 336.263305]),
         accent: true,
       },
       mauve: {
         name: "Mauve",
-        object: new Color("#ca9ee6"),
+        object: new Color("oklch", [0.764753, 0.110771, 311.743605]),
         accent: true,
       },
       red: {
         name: "Red",
-        object: new Color("#e78284"),
+        object: new Color("oklch", [0.717099, 0.124368, 19.385905]),
         accent: true,
       },
       maroon: {
         name: "Maroon",
-        object: new Color("#ea999c"),
+        object: new Color("oklch", [0.764639, 0.097560, 17.177052]),
         accent: true,
       },
       peach: {
         name: "Peach",
-        object: new Color("#ef9f76"),
+        object: new Color("oklch", [0.772722, 0.110572, 47.726382]),
         accent: true,
       },
       yellow: {
         name: "Yellow",
-        object: new Color("#e5c890"),
+        object: new Color("oklch", [0.844316, 0.079543, 83.471650]),
         accent: true,
       },
       green: {
         name: "Green",
-        object: new Color("#a6d189"),
+        object: new Color("oklch", [0.812374, 0.107061, 133.391921]),
         accent: true,
       },
       teal: {
         name: "Teal",
-        object: new Color("#81c8be"),
+        object: new Color("oklch", [0.782980, 0.072961, 184.644973]),
         accent: true,
       },
       sky: {
         name: "Sky",
-        object: new Color("#99d1db"),
+        object: new Color("oklch", [0.825502, 0.059160, 209.756111]),
         accent: true,
       },
       sapphire: {
         name: "Sapphire",
-        object: new Color("#85c1dc"),
+        object: new Color("oklch", [0.779553, 0.072675, 227.879689]),
         accent: true,
       },
       blue: {
         name: "Blue",
-        object: new Color("#8caaee"),
+        object: new Color("oklch", [0.742010, 0.104444, 265.663193]),
         accent: true,
       },
       lavender: {
         name: "Lavender",
-        object: new Color("#babbf1"),
+        object: new Color("oklch", [0.809899, 0.075883, 283.740494]),
         accent: true,
       },
       text: {
         name: "Text",
-        object: new Color("#c6d0f5"),
+        object: new Color("oklch", [0.861916, 0.052553, 273.347361]),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#b5bfe2"),
+        object: new Color("oklch", [0.808435, 0.050670, 272.677975]),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#a5adce"),
+        object: new Color("oklch", [0.752384, 0.048283, 274.472593]),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#949cbb"),
+        object: new Color("oklch", [0.696974, 0.046370, 273.776912]),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#838ba7"),
+        object: new Color("oklch", [0.640055, 0.043000, 272.613701]),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#737994"),
+        object: new Color("oklch", [0.580854, 0.042052, 275.198183]),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#626880"),
+        object: new Color("oklch", [0.521117, 0.038590, 273.999202]),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#51576d"),
+        object: new Color("oklch", [0.460057, 0.036661, 272.965799]),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#414559"),
+        object: new Color("oklch", [0.394919, 0.034239, 275.899927]),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#303446"),
+        object: new Color("oklch", [0.329074, 0.032391, 274.758046]),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#292c3c"),
+        object: new Color("oklch", [0.297342, 0.029378, 276.214395]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#232634"),
+        object: new Color("oklch", [0.272002, 0.026387, 275.115405]),
         accent: false,
       },
     },
@@ -303,132 +303,132 @@ const definitions = {
     colors: {
       rosewater: {
         name: "Rosewater",
-        object: new Color("#f4dbd6"),
+        object: new Color("oklch", [0.910521, 0.028644, 31.132555]),
         accent: true,
       },
       flamingo: {
         name: "Flamingo",
-        object: new Color("#f0c6c6"),
+        object: new Color("oklch", [0.862879, 0.047894, 18.120311]),
         accent: true,
       },
       pink: {
         name: "Pink",
-        object: new Color("#f5bde6"),
+        object: new Color("oklch", [0.860804, 0.083028, 336.179893]),
         accent: true,
       },
       mauve: {
         name: "Mauve",
-        object: new Color("#c6a0f6"),
+        object: new Color("oklch", [0.771523, 0.125896, 303.898395]),
         accent: true,
       },
       red: {
         name: "Red",
-        object: new Color("#ed8796"),
+        object: new Color("oklch", [0.737000, 0.125156, 11.194318]),
         accent: true,
       },
       maroon: {
         name: "Maroon",
-        object: new Color("#ee99a0"),
+        object: new Color("oklch", [0.770232, 0.102367, 14.370734]),
         accent: true,
       },
       peach: {
         name: "Peach",
-        object: new Color("#f5a97f"),
+        object: new Color("oklch", [0.798823, 0.106056, 49.637586]),
         accent: true,
       },
       yellow: {
         name: "Yellow",
-        object: new Color("#eed49f"),
+        object: new Color("oklch", [0.878989, 0.074442, 84.750976]),
         accent: true,
       },
       green: {
         name: "Green",
-        object: new Color("#a6da95"),
+        object: new Color("oklch", [0.834985, 0.107910, 138.150330]),
         accent: true,
       },
       teal: {
         name: "Teal",
-        object: new Color("#8bd5ca"),
+        object: new Color("oklch", [0.821358, 0.075506, 184.100028]),
         accent: true,
       },
       sky: {
         name: "Sky",
-        object: new Color("#91d7e3"),
+        object: new Color("oklch", [0.836935, 0.071869, 209.365774]),
         accent: true,
       },
       sapphire: {
         name: "Sapphire",
-        object: new Color("#7dc4e4"),
+        object: new Color("oklch", [0.785077, 0.084521, 228.377975]),
         accent: true,
       },
       blue: {
         name: "Blue",
-        object: new Color("#8aadf4"),
+        object: new Color("oklch", [0.749728, 0.110096, 263.810329]),
         accent: true,
       },
       lavender: {
         name: "Lavender",
-        object: new Color("#b7bdf8"),
+        object: new Color("oklch", [0.814365, 0.083352, 279.853667]),
         accent: true,
       },
       text: {
         name: "Text",
-        object: new Color("#cad3f5"),
+        object: new Color("oklch", [0.870825, 0.048078, 273.665091]),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#b8c0e0"),
+        object: new Color("oklch", [0.811977, 0.045942, 274.267185]),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#a5adcb"),
+        object: new Color("oklch", [0.751281, 0.044056, 273.532655]),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#939ab7"),
+        object: new Color("oklch", [0.690488, 0.043335, 274.538771]),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#8087a2"),
+        object: new Color("oklch", [0.627154, 0.041473, 273.732825]),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#6e738d"),
+        object: new Color("oklch", [0.560792, 0.040672, 276.474753]),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#5b6078"),
+        object: new Color("oklch", [0.493852, 0.038872, 275.683316]),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#494d64"),
+        object: new Color("oklch", [0.425904, 0.038509, 276.947676]),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#363a4f"),
+        object: new Color("oklch", [0.353790, 0.036947, 275.985096]),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#24273a"),
+        object: new Color("oklch", [0.278808, 0.035341, 276.936815]),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#1e2030"),
+        object: new Color("oklch", [0.249251, 0.030481, 278.435034]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#181926"),
+        object: new Color("oklch", [0.218806, 0.025457, 280.657237]),
         accent: false,
       },
     },
@@ -440,132 +440,132 @@ const definitions = {
     colors: {
       rosewater: {
         name: "Rosewater",
-        object: new Color("#f5e0dc"),
+        object: new Color("oklch", [0.922570, 0.023835, 30.491855]),
         accent: true,
       },
       flamingo: {
         name: "Flamingo",
-        object: new Color("#f2cdcd"),
+        object: new Color("oklch", [0.879744, 0.041813, 17.975025]),
         accent: true,
       },
       pink: {
         name: "Pink",
-        object: new Color("#f5c2e7"),
+        object: new Color("oklch", [0.870033, 0.075158, 336.304085]),
         accent: true,
       },
       mauve: {
         name: "Mauve",
-        object: new Color("#cba6f7"),
+        object: new Color("oklch", [0.787146, 0.118670, 304.769304]),
         accent: true,
       },
       red: {
         name: "Red",
-        object: new Color("#f38ba8"),
+        object: new Color("oklch", [0.755592, 0.129702, 2.764165]),
         accent: true,
       },
       maroon: {
         name: "Maroon",
-        object: new Color("#eba0ac"),
+        object: new Color("oklch", [0.782050, 0.090330, 8.848165]),
         accent: true,
       },
       peach: {
         name: "Peach",
-        object: new Color("#fab387"),
+        object: new Color("oklch", [0.823678, 0.101460, 52.629417]),
         accent: true,
       },
       yellow: {
         name: "Yellow",
-        object: new Color("#f9e2af"),
+        object: new Color("oklch", [0.919303, 0.070415, 86.528082]),
         accent: true,
       },
       green: {
         name: "Green",
-        object: new Color("#a6e3a1"),
+        object: new Color("oklch", [0.857704, 0.109229, 142.715289]),
         accent: true,
       },
       teal: {
         name: "Teal",
-        object: new Color("#94e2d5"),
+        object: new Color("oklch", [0.858489, 0.079207, 182.749513]),
         accent: true,
       },
       sky: {
         name: "Sky",
-        object: new Color("#89dceb"),
+        object: new Color("oklch", [0.846711, 0.083336, 210.254541]),
         accent: true,
       },
       sapphire: {
         name: "Sapphire",
-        object: new Color("#74c7ec"),
+        object: new Color("oklch", [0.790650, 0.096490, 228.652679]),
         accent: true,
       },
       blue: {
         name: "Blue",
-        object: new Color("#89b4fa"),
+        object: new Color("oklch", [0.766420, 0.111344, 259.884976]),
         accent: true,
       },
       lavender: {
         name: "Lavender",
-        object: new Color("#b4befe"),
+        object: new Color("oklch", [0.816596, 0.090952, 277.309243]),
         accent: true,
       },
       text: {
         name: "Text",
-        object: new Color("#cdd6f4"),
+        object: new Color("oklch", [0.878660, 0.042552, 272.276738]),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#bac2de"),
+        object: new Color("oklch", [0.816823, 0.040345, 272.862189]),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#a6adc8"),
+        object: new Color("oklch", [0.750961, 0.039565, 273.931990]),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#9399b2"),
+        object: new Color("oklch", [0.686521, 0.037355, 274.725277]),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#7f849c"),
+        object: new Color("oklch", [0.617567, 0.036670, 276.004708]),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#6c7086"),
+        object: new Color("oklch", [0.549691, 0.034494, 277.095075]),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#585b70"),
+        object: new Color("oklch", [0.476506, 0.033994, 278.643040]),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#45475a"),
+        object: new Color("oklch", [0.403691, 0.031955, 280.152004]),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#313244"),
+        object: new Color("oklch", [0.324022, 0.031885, 281.978442]),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#1e1e2e"),
+        object: new Color("oklch", [0.242867, 0.030357, 283.910970]),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#181825"),
+        object: new Color("oklch", [0.215522, 0.025417, 284.064699]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#11111b"),
+        object: new Color("oklch", [0.182782, 0.020375, 284.203848]),
         accent: false,
       },
     },
@@ -648,7 +648,7 @@ const ansiMappings = {
 };
 
 const toHex = (color: Color): string => {
-  return color.toString({ format: "hex" });
+  return color.to("srgb").toString({ format: "hex" });
 };
 
 const toRgb = (color: Color): { r: number; g: number; b: number } => {
@@ -718,9 +718,9 @@ const formatted = entriesFromObject(definitions).reduce(
           } else {
             normalColor = flavor.colors[mapping].object;
             brightColor = new Color(normalColor);
-            brightColor.lch.l *= flavor.dark ? 0.94 : 1.09;
-            brightColor.lch.c += flavor.dark ? 8 : 0;
-            brightColor.lch.h += 2;
+            brightColor.oklch.l *= flavor.dark ? 0.94 : 1.09;
+            brightColor.oklch.c += flavor.dark ? 0.08 : 0;
+            brightColor.oklch.h += 2;
           }
 
           acc[name] = {

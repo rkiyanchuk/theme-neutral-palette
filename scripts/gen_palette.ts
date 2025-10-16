@@ -671,6 +671,15 @@ const toHsl = (hex: string): { h: number; s: number; l: number } => {
   };
 };
 
+const toOklch = (color: Color): { l: number; c: number; h: number } => {
+  const oklch = color.oklch;
+  return {
+    l: oklch.l,
+    c: oklch.c,
+    h: oklch.h,
+  };
+};
+
 const formatted = entriesFromObject(definitions).reduce(
   (acc, [flavorName, flavor], currentIndex) => {
     acc[flavorName] = {
@@ -686,6 +695,7 @@ const formatted = entriesFromObject(definitions).reduce(
             hex: toHex(color.object),
             rgb: toRgb(color.object),
             hsl: toHsl(toHex(color.object)),
+            oklch: toOklch(color.object),
             accent: color.accent,
           };
           return acc;

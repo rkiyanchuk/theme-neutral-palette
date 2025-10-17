@@ -4,7 +4,6 @@ type FlavorName = "latte" | "frappe" | "macchiato" | "mocha";
 
 const flavors: FlavorName[] = ["latte", "frappe", "macchiato", "mocha"];
 
-console.log("VS Code Color Override Settings:");
 console.log("");
 console.log('"catppuccin.colorOverrides": {');
 
@@ -27,4 +26,3 @@ flavors.forEach((flavorName, idx) => {
 
 console.log("}");
 console.log("");
-console.log("// Copy the above configuration into your VS Code settings.json file");

@@ -149,12 +149,12 @@ const definitions = {
       },
       mantle: {
         name: "Mantle",
-        object: new Color("oklch", [0.933459, 0.000000, 244.520602]),
+        object: new Color("oklch", [0.9677, 0.0000, 237.06]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("oklch", [0.905965, 0.000000, 244.507105]),
+        object: new Color("oklch", [0.9759, 0.0000, 230.57]),
         accent: false,
       },
     },
@@ -286,12 +286,12 @@ const definitions = {
       },
       mantle: {
         name: "Mantle",
-        object: new Color("oklch", [0.297342, 0.009378, 256.214395]),
+        object: new Color("oklch", [0.3026, 0.0101, 262.23]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("oklch", [0.272002, 0.006387, 255.115405]),
+        object: new Color("oklch", [0.2806, 0.0100, 268.72]),
         accent: false,
       },
     },
@@ -423,12 +423,12 @@ const definitions = {
       },
       mantle: {
         name: "Mantle",
-        object: new Color("oklch", [0.249251, 0.010481, 258.435034]),
+        object: new Color("oklch", [0.2563, 0.0125, 264.41]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("oklch", [0.218806, 0.005457, 260.657237]),
+        object: new Color("oklch", [0.2377, 0.0123, 270.90]),
         accent: false,
       },
     },
@@ -555,17 +555,17 @@ const definitions = {
       },
       base: {
         name: "Base",
-        object: new Color("oklch", [0.245807, 0.015272, 256.806]),
+        object: new Color("oklch", [0.2458, 0.0153, 256.81]),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("oklch", [0.218131, 0.007988, 256.806]),
+        object: new Color("oklch", [0.226, 0.0125, 264.28]),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("oklch", [0.184994, 0.000553, 256.806]),
+        object: new Color("oklch", [0.2096, 0.0123, 270.77]),
         accent: false,
       },
     },

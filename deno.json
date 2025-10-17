@@ -17,6 +17,7 @@
     "build": "deno task build:npm & deno task build:palettes",
     "generate": "deno run -A ./scripts/gen_palette.ts",
     "vscode-overrides": "deno run -A ./scripts/gen_vscode_overrides.ts",
+    "ghostty-themes": "deno run -A ./scripts/gen_ghostty_themes.ts",
     "demo": "deno run --allow-net --allow-read server.ts"
   }
 }
